@@ -1,0 +1,115 @@
+{
+  "type": "minecraft:confirmation",
+  "title": {
+    "text": "Personal Settings",
+    "color": "gold",
+    "bold": true
+  },
+  "external_title": {
+    "text": "Difficulty Settings",
+    "color": "gold"
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        { "text": "Select your own Difficulty \n and Keep-Inventory Settings", "color": "white" }
+      ],
+      "width": 256
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "minecraft:iron_sword"
+      },
+      "description": {
+        "contents": [
+          { "text": "Difficulty Options:\n\n", "color": "white", "bold": true },
+          { "text": "Easy\n", "color": "green", "bold": false },
+          { "text": "Normal\n", "color": "yellow", "bold": false },
+          { "text": "Hard\n", "color": "red", "bold": false },
+          { "text": "Hardcore", "color": "dark_red", "bold": false }
+        ],
+        "width": 240
+      },
+      "width": 24,
+      "height": 16
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "minecraft:enchanted_golden_apple"
+      },
+      "description": {
+        "contents": [
+		  { "text": "Die in ", "color": "white", "bold": false },
+		  { "text": "Hardcore ", "color": "dark_red", "bold": true },
+		  { "text": "and you’ll permanently lose 1 Heart until you hit a Floor of 3 Hearts. \nEat an ", "color": "white", "bold": false },
+          { "text": "Enchanted Golden Apple \n", "color": "light_purple", "bold": true },
+          { "text": "to replenish 1 lost Heart.", "color": "white", "bold": false }
+        ],
+        "width": 240
+      },
+      "width": 24,
+      "height": 16
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "minecraft:chest"
+      },
+      "description": {
+        "contents": [
+          { "text": "If ", "color": "white", "bold": false },
+          { "text": "Keep Inventory ", "color": "aqua", "bold": true },
+		  { "text": "enabled, \nyou will keep all items upon death.", "color": "white", "bold": false }
+
+        ],
+        "width": 240
+      },
+      "width": 24,
+      "height": 16
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        { "text": " " }
+      ],
+      "width": 240
+    }
+  ],
+  "inputs": [
+    {
+      "type": "minecraft:single_option",
+      "key": "difficulty",
+      "label": { "text": "Difficulty", "bold": true },
+      "width": 256,
+      "options": [
+        { "id": "easy", "display": { "text": " Easy ", "color": "green" }, "initial": true },
+        { "id": "normal", "display": { "text": " Normal ", "color": "yellow" } },
+        { "id": "hard", "display": { "text": " Hard ", "color": "red" } },
+        { "id": "hardcore", "display": { "text": " Hardcore ", "color": "dark_red", "bold": true } }
+      ]
+    },
+    {
+      "type": "minecraft:boolean",
+      "key": "keepinventory",
+      "label": { "text": "Keep Inventory on Death", "bold": true },
+      "initial": false,
+      "on_true": "true",
+      "on_false": "false"
+    }
+  ],
+  "yes": {
+    "label": { "text": "✔ Confirm", "color": "green", "bold": true },
+    "tooltip": { "text": "Apply your selected settings" },
+    "action": {
+      "type": "dynamic/run_command",
+      "template": "pdifficulty_apply $(difficulty) $(keepinventory)"
+    }
+  },
+  "no": {
+    "label": { "text": "✖ Cancel", "color": "white" },
+    "tooltip": { "text": "Close without changing anything" }
+  }
+}

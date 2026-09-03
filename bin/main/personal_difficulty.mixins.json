@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "package": "dev.felix.personaldifficulty.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "mixins": [
+      "CaveSpiderDifficultyMixin",
+      "FoodDataDifficultyMixin",
+      "LevelAccessorDifficultyMixin",
+      "ItemStackEatMixin",
+      "MobDifficultyContextMixin",
+      "PlayerDamageDifficultyMixin",
+      "ProjectileDifficultyContextMixin",
+      "SystemReportMixin",
+	  "ServerPlayerKeepInventoryMixin",
+	  "PlayerKeepInventoryMixin"
+  ],
+  
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

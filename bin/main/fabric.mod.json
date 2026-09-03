@@ -1,0 +1,27 @@
+{
+	"schemaVersion": 1,
+	"id": "personal_difficulty",
+	"version": "${version}",
+	"name": "Personal Difficulty",
+	"description": "Server-side per-player difficulty profiles for hard-mode Fabric servers.",
+	"authors": [
+		"Felix"
+	],
+	"contact": {},
+	"license": "MIT",
+	"environment": "server",
+	"entrypoints": {
+		"main": [
+			"dev.felix.personaldifficulty.PersonalDifficultyMod"
+		]
+	},
+	"mixins": [
+		"personal_difficulty.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
