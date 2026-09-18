@@ -1,23 +1,23 @@
 # Personal Difficulty
 
-Server-side Fabric mod for Minecraft Java Edition 26.2. Players can choose a personal difficulty and Keep Inventory setting while the server keeps one real world difficulty.
+Server-side Fabric mod for Minecraft Java Edition 26.3. Players can choose a personal difficulty and Keep Inventory setting while the server keeps one real world difficulty.
 
 Vanilla clients can join. The mod only needs to be installed on the Fabric server.
 
 ## Verified Target
 
-This project targets Minecraft Java Edition `26.2`.
+This project targets Minecraft Java Edition `26.3`.
 
-As of 2026-08-31, Fabric's 26.2 announcement recommends:
+As of 2026-09-18, Fabric's 26.3 announcement recommends:
 
-- Minecraft `26.2`
+- Minecraft `26.3`
 - Java `25+`
-- Fabric Loader `0.19.3`
+- Fabric Loader `0.19.5`
 - Fabric Loom `1.17.x`
-- Gradle `9.5.1`
+- Gradle `9.6.0`
 - Mojang/unobfuscated names, with no Yarn mappings for 26.x
 
-Fabric's 26.2 example project and Fabric Maven currently use Fabric API `0.158.0+26.2`. This project pins that API version and Loom `1.17.20`.
+Fabric's 26.3 example project and Fabric Maven currently use Fabric API `0.160.7+26.3`. This project pins that API version and Loom `1.17.21`.
 
 ## What It Changes
 
@@ -92,4 +92,4 @@ Use Java 25 or newer.
 ./gradlew build
 ```
 
-The server jar will be in `build/libs/`. Install it in the server `mods` folder together with Fabric API for Minecraft 26.2.
+The server jar will be in `build/libs/`. Install it in the server `mods` folder together with Fabric API for Minecraft 26.3.
